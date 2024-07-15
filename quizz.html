@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quizz.css">
+</head>
+<body>
+    <img src="images/hamburger.svg" alt="menu" class="hamburger">
+    <nav class="menu-navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre Emiratos</a>
+        <a href="places.html">Lugares Turísticos</a>
+        <a href="platos.html">Gastronomía</a>
+        <a href="#">Aprende Jugando</a>
+    </nav>
+
+    <header>
+        <h1 class="titulo">QUIZZ</h1>
+        <h3>Demuestra lo aprendido sobre Emiratos Árabes Unidos</h3>
+    </header>
+
+    <h2><span id="nota"></span></h2>
+
+    <div class="container">
+        <section>
+            <h3>Nombre:</h3>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]+" required>
+            <span id="nombre-error" style="color: darkred; display: none;">Por favor, ingrese solo letras.</span>
+        </section>
+
+        <section id="p0">
+            <h3>1. ¿Cuáles son los colores de su bandera?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">Franjas horizontales verde, blanca y negra y una franja roja vertical. 
+            </label>
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">Franjas horizontales verde, blanca y negra y roja.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">Franjas horizontales amarilla, azul y roja.
+            </label>
+        </section>
+        <section id="p1">
+            <h3>2. ¿En qué se basa principalmente su economía?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">La economía de los Emiratos Árabes Unidos se basa principalmente en la pesca de perlas.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">La economía de los Emiratos Árabes Unidos se basa principalmente en la industria textil.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">La economía de los Emiratos Árabes Unidos se basa principalmente en el petróleo.
+            </label>
+        </section>
+        <section id="p2">
+            <h3>3. ¿De cuántos Emiratos esta conpuesto el país?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)">7
+            </label>
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">5
+            </label>
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">10
+            </label>
+        </section>
+        <section id="p3">
+            <h3>4. Seleccione los animales más importantes en Emiratos Árabes Unidos</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">León
+            </label>
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)">Camello
+            </label>
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)">Hálcon
+            </label>
+        </section>
+        <section id="p4">
+            <h3>5. Emiratos Árabes Unidos es un país multicultural. Esto quiere decir que:</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)">Todos los ciudadanos hablan el mismo idioma.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)">Es un país con más de 200 nacionalidades.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p4" onclick="respuesta(4,this)">La mayoría de la población practica la misma religión.
+            </label>
+        </section>
+        <button onclick="corregir()">CALIFICAR</button>
+        <button onclick="reiniciar()">COMENZAR DE NUEVO</button>
+        <h2>Cantidad de preguntas acertadas: <span id="resultado"></span></h2>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/quizz.js"></script>
+</body>
+</html>

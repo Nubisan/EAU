@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.logotipo{
+   width: 100px; 
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.contenedor{
+    width: 90%;
+    min-height: 1200px;
+    overflow: hidden; 
+    margin: auto;
+}
+
+.hamburger{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+
+.menu-navegacion{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.spread{
+    transform: translate(0); /*Click en el boton aparezca de nuevo*/ 
+}
+
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*Index y about*/ 
+
+header{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+p{
+    text-align: justify;
+}
+
+.subtitulo{
+    text-align: center;
+    font-weight: 700;
+    color: #9f8ad0;
+    font-size: 40px;
+    padding: 20px;
+}
+
+h5{
+    text-align: center;
+    margin-top: 2px;
+}
+
+.custom-height {
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.number{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+/*LUGARES TURISTICOS*/
+
+.gallery{
+    background: #f2f2f2ba;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*Si no alcanza en la fila lo pone abajo*/
+}
+
+.text-img{
+    width: 30%;
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+    border: 2px solid #667eea;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.img-galeria{
+    width: 100%;
+    height: 283px;
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transform: translate(100%); /*Se oculta*/
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0); /*Se visualiza*/
+}
+
+.agregar-imagen{
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0); 
+    transition: transform .3s .2s;
+}
+
+.showImagen{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute; /*Como su padre esta fijo se posisiona inmediatamente a su padre*/
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/*Gastronomia*/
+
+.repeat-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-tab-wp{
+    margin-bottom: 80px;
+}
+
+.menu-tab ul{
+    padding: 10px;
+    display: inline-block;
+    border-radius: 60px;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow: 28px 28px 55px #d4d4d4, -28px -28px 55px #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-tab ul li, .menu-tab ul .filter-active{
+    display: inline-flex;
+    font-size: 18px;
+    line-height: normal;
+    cursor: pointer;
+    padding: 10px 26px;
+    border-radius: 30px;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list-row .bydefault_show .dish-box-wp{
+    display: inline-block !important;
+}
+
+.dish-box-wp{
+    display: none;
+}
+
+.dish-box{
+    border-radius: 30px;
+    background: linear-gradient(145deg, #ececec, #fff);
+    box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #fff;
+    display: flow-root;
+    padding: 10px; 
+    margin: 130px 0 30px;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    border: 2px solid #5624d0;
+}
+
+.dish-box:hover{
+    transform: scale(1.03);
+}
+
+.dish-img img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.dish-img{
+    margin-top: -130px;
+    margin-bottom: 30px;
+}
